@@ -25,7 +25,7 @@ public class Producer implements Runnable {
 		
 		int counter = 0;
 		
-		while (!Thread.currentThread().isInterrupted()) {
+		while (!Thread.interrupted()) {
 			queue.push(++counter);
 			System.out.println("[" + name + "] Pushed " + counter);
 

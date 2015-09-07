@@ -22,7 +22,7 @@ public class Consumer implements Runnable {
 	
 	@Override
 	public void run() {
-		while(!Thread.currentThread().isInterrupted()) {
+		while(!Thread.interrupted()) {
 			int val = queue.pop();
 			
 			System.out.println("[" + name + "] Popped " + val);
